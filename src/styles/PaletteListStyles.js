@@ -1,3 +1,5 @@
+import { whileStatement } from "@babel/types";
+
 export default {
   root: {
     backgroundColor: "blue",
@@ -17,7 +19,11 @@ export default {
     display: "flex",
     width: "100%",
     justifyContent: "space-between",
-    color: "white"
+    color: "white",
+    alignItems: "center",
+    "& a": {
+      color: "white"
+    }
   },
   palettes: {
     boxSizing: "border-box",
