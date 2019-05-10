@@ -23,14 +23,17 @@ class App extends Component {
     this.setState({ palettes: [...this.state.palettes, newPalette] });
   }
   render() {
-    //console.log(generatePalette(seedColors[4]));
     return (
       <Switch>
         <Route
           exact
           path='/palette/new'
           render={routeProps => (
-            <NewPaletteForm savePalette={this.savePalette} {...routeProps} />
+            <NewPaletteForm
+              savePalette={this.savePalette}
+              palettes={this.state.palettes}
+              {...routeProps}
+            />
           )}
         />
         <Route
@@ -64,9 +67,6 @@ class App extends Component {
           )}
         />
       </Switch>
-      /* <div>
-        <Palette palette={generatePalette(seedColors[4])} />
-      </div>*/
     );
   }
 }
