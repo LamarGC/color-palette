@@ -82,6 +82,9 @@ class ColorPickerForm extends Component {
           >
             {paletteIsFull ? "Palette Full" : "Add Color"}
           </Button>
+          <div className={classes.reorderMessage}>
+            *Reorder with drag and drop
+          </div>
         </ValidatorForm>
       </div>
     );

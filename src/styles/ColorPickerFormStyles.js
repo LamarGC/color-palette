@@ -12,6 +12,9 @@ const styles = {
   colorNameInput: {
     width: "100%",
     height: "70px"
+  },
+  reorderMessage: {
+    marginTop: "20px"
   }
 };
 
